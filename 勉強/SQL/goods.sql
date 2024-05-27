@@ -18,6 +18,7 @@ create table public.goods (
   , theme varchar(100)
   , target integer
   , point integer
+  , image BYTEA NOT NULL
   , update_data timestamp not null
   , delete_data timestamp
   , delete_flag boolean
@@ -65,6 +66,9 @@ comment on column public.goods.target is '対象年齢'
 /
 
 comment on column public.goods.point is '付与ポイント'
+/
+
+comment on column public.goods.image is '画像'
 /
 
 comment on column public.goods.update_data is '更新日時'
